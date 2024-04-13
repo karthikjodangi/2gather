@@ -30,6 +30,10 @@ function Header() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
+          {/* <Button variant="outline-light" className="ms-2">Register/Sign In</Button> */}
+          <Button variant="outline-light" className="ms-2">
+          <Nav.Link href="/authentication">Register/Sign-in</Nav.Link>
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

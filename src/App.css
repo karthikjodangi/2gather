@@ -37,4 +37,48 @@
   }
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+}
+
+.options button {
+  margin: 0 10px;
+}
+
+.activity-view {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.activity-view.join {
+  justify-content: flex-end;
+}
+
+.activity-view.create {
+  justify-content: flex-start;
+}
+
+.active {
+  background-color: lightblue; /* Add your active button styles */
+}
+
 
