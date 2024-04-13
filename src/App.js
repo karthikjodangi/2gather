@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './MyComponents/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './MyComponents/About';
-import MyEvents from './MyComponents/MyEvents';
+import MyActivities from './MyComponents/MyActivities';
 import Buddies from './MyComponents/Buddies';
 import CreateActivity from './MyComponents/CreateActivity';
 import JoinActivity from './MyComponents/JoinActivity';
+import Activities from './MyComponents/Activities';
 
 const App = () => {
   const [choice, setChoice] = useState(null); // State to hold the user's choice
@@ -37,9 +38,10 @@ const App = () => {
                 </div>
               </>
             } />
-            <Route exact path="/myevents" element={<MyEvents />} />
+            <Route exact path="/myactivities" element={<MyActivities />} />
             <Route path="/buddies" element={<Buddies />} />
             <Route path="/about" element={<About />} />
+            <Route path="/activities" element={<Activities />} />
           </Routes>
         </div>
       </Router>
