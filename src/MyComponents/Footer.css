@@ -3,8 +3,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #333; /* Background color of the footer */
-    padding: 10px 0; /* Adjust padding as needed */
+    background-color:  #006400; 
+    padding: 10px 0; 
     text-align: center;
   }
   
@@ -14,11 +14,11 @@
   }
   
   .social-icons a {
-    color: white; /* Icon color */
-    font-size: 1.5rem; /* Icon size */
-    margin: 0 10px; /* Adjust margin between icons */
+    color: white; 
+    font-size: 1.5rem; 
+    margin: 0 10px; 
   }
   
   .social-icons a:hover {
-    color: #ccc; /* Icon color on hover */
+    color: #ccc; 
   }

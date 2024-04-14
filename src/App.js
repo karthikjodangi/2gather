@@ -32,27 +32,28 @@ const App = () => {
               path="/"
               element={
                 <>
-                  <div className="content">
-                    {/* Display options to create or join an activity */}
-                    <div className="options">
-                      <button
-                        className={choice === 'create' ? 'active' : ''}
-                        onClick={() => handleChoice('create')}
-                      >
-                        Create Activity
-                      </button>
-                      <button
-                        className={choice === 'join' ? 'active' : ''}
-                        onClick={() => handleChoice('join')}
-                      >
-                        Join Activity
-                      </button>
+                  <div className="container col-xxl-8 px-4 py-5">
+                    <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+                      <div className="col-10 col-sm-8 col-lg-6">
+                        <img src="serene.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="500" loading="lazy" />
+                      </div>
+                      <div className="col-lg-6">
+                        <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Let's get <span className="green-text">GREEN</span> 2Gather</h1>
+                        <p className="lead">Join the fun on our app! Gather your crew for eco-adventures, from tree planting to beach cleanups. Save cash by teaming up with pals for group activities and enjoy making a positive impact on nature. Create or join groups focusing on sustainable development goals. Let's have a blast while saving the planet and our wallets! 🌿👫💰 <span className="blue-text">#SustainableSquadGoals</span></p>
+                        <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                          <button type="button" className={`btn btn-primary btn-lg px-4 me-md-2 ${choice === 'create' ? 'active' : ''}`}
+                            onClick={() => handleChoice('create')}>Create Activity</button>
+                          <button type="button" className={`btn btn-outline-secondary btn-lg px-4 ${choice === 'join' ? 'active' : ''}`}
+                            onClick={() => handleChoice('join')}>Join Activity</button>
+                        </div>
+                      </div>
                     </div>
-                    {/* Render the appropriate component based on the user's choice */}
-                    <div className={`activity-view ${choice}`}>
-                      {choice === 'create' && <CreateActivity />}
-                      {choice === 'join' && <JoinActivity />}
-                    </div>
+                  </div>
+
+                  {/* Render the appropriate component based on the user's choice */}
+                  <div className={`activity-view ${choice}`}>
+                    {choice === 'create' && <CreateActivity />}
+                    {choice === 'join' && <JoinActivity />}
                   </div>
                 </>
               }

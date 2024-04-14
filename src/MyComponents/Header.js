@@ -6,9 +6,9 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
-    <Navbar bg="dark" data-bs-theme="dark" >
+    <Navbar className="navbar" style={{ backgroundColor: '#006400' }}>
       <Container fluid>
-        <Navbar.Brand href="/">2Gather</Navbar.Brand>
+        <Navbar.Brand href="/" style={{ color: 'white' ,fontSize: '24px', fontWeight: 'bold'}}>2Gather</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -16,10 +16,9 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/myactivities">My Activities</Nav.Link>
-            <Nav.Link href="/buddies">Buddies</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            
+            <Nav.Link href="/myactivities" style={{ color: 'white' }}>My Activities</Nav.Link>
+            <Nav.Link href="/buddies" style={{ color: 'white' }}>Buddies</Nav.Link>
+            <Nav.Link href="/about" style={{ color: 'white' }}>About</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -28,11 +27,10 @@ function Header() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" style={{ color: 'white', borderColor: 'white' }}>Search</Button>
           </Form>
-          {/* <Button variant="outline-light" className="ms-2">Register/Sign In</Button> */}
-          <Button variant="outline-light" className="ms-2">
-          <Nav.Link href="/authentication">Register/Sign-in</Nav.Link>
+          <Button variant="outline-success" className="ms-2">
+            <Nav.Link href="/authentication" style={{ color: 'white' }}>Register/Sign-in</Nav.Link>
           </Button>
         </Navbar.Collapse>
       </Container>

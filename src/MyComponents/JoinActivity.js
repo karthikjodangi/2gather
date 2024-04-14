@@ -1,23 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Create-JoinActivity.css'; 
 
 const JoinActivity = () => {
   return (
     <div>
-      <h3>Categories:</h3>
-      {/* Render buttons for each activity */}
-      <div>
+
+      <h3 className='text-secondary'>Categories to Join:</h3>
+      
+      <div className="button-container">
         <Link to="/activities">
-          <button>Save Nature</button>
+          <button className="orange-button">Save Nature</button>
         </Link>
         <Link to="/activities">
-          <button>Be Productive</button>
+          <button className="red-button">Be Productive</button>
         </Link>
         <Link to="/activities">
-          <button>Have fun</button>
+          <button className="teal-button">Have fun</button>
         </Link>
         <Link to="/activities">
-          <button>Get Sportive</button>
+          <button className="purple-button">Get Sportive</button>
+        </Link>
+        <Link to="/activities">
+          <button className="blue-button">Travel/Outdoor</button>
+        </Link>
+        <Link to="/activities">
+          <button className="green-button">Indoor </button>
         </Link>
       </div>
     </div>
