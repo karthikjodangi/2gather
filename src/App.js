@@ -11,6 +11,7 @@ import JoinActivity from './MyComponents/JoinActivity';
 import Activities from './MyComponents/Activities';
 import './App.css'; // Import your CSS file for custom styling
 import Login from './MyComponents/Login';
+import SignUp from './MyComponents/SignUp';
 
 const App = () => {
   const [choice, setChoice] = useState(null); // State to hold the user's choice
@@ -62,6 +63,7 @@ const App = () => {
             <Route path="/buddies" element={<Buddies />} />
             <Route path="/about" element={<About />} />
             <Route path="/authentication" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/activities" element={<Activities />} />
           </Routes>
         </div>
