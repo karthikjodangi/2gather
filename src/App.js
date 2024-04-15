@@ -24,10 +24,10 @@ const App = () => {
   return (
     <div className="app-container">
       <Header />
-
       <Router>
         <div className="content-container">
           <Routes>
+          <Route exact path="/authentication" element={<Login/>} />
             <Route
               exact
               path="/"
