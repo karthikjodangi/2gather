@@ -13,6 +13,9 @@ import './App.css'; // Import your CSS file for custom styling
 import Login from './MyComponents/Login';
 import SignUp from './MyComponents/SignUp';
 
+import sereneImg from './Images/serene.png'
+
+
 const App = () => {
   const [choice, setChoice] = useState(null); // State to hold the user's choice
 
@@ -24,10 +27,10 @@ const App = () => {
   return (
     <div className="app-container">
       <Header />
+
       <Router>
         <div className="content-container">
           <Routes>
-          <Route exact path="/authentication" element={<Login/>} />
             <Route
               exact
               path="/"
@@ -36,7 +39,7 @@ const App = () => {
                   <div className="container col-xxl-8 px-4 py-5">
                     <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                       <div className="col-10 col-sm-8 col-lg-6">
-                        <img src="serene.png" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="500" loading="lazy" />
+                        <img src = {sereneImg} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="500" loading="lazy" />
                       </div>
                       <div className="col-lg-6">
                         <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Let's get <span className="green-text">GREEN</span> 2Gather</h1>
@@ -64,7 +67,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/authentication" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/activities" element={<Activities />} />
+            <Route path="/activities/:selectedCategory" element={<Activities />} />
           </Routes>
         </div>
       </Router>

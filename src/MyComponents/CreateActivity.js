@@ -1,32 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import Activities from './Activities';
+import { useNavigate } from 'react-router-dom';
 import "./Create-JoinActivity.css"
 
 const CreateActivity = () => {
+  const [selectedCategory] = useState(null);
+  const navigate=useNavigate()
+
+
+
   return (
     <div>
-      <h3 className='text-primary'>Categories to Add:</h3>
+      <h3 className='text-secondary'>Categories to Join:</h3>
       
       <div className="button-container">
-        <Link to="/activities">
-          <button className="green-button">Save Nature</button>
-        </Link>
-        <Link to="/activities">
-          <button className="blue-button">Be Productive</button>
-        </Link>
-        <Link to="/activities">
-          <button className="orange-button">Have fun</button>
-        </Link>
-        <Link to="/activities">
-          <button className="red-button">Get Sportive</button>
-        </Link>
-        <Link to="/activities">
-          <button className="purple-button">Travel/Outdoor</button>
-        </Link>
-        <Link to="/activities">
-          <button className="teal-button">Indoor </button>
-        </Link>
+        <button className="green-button" onClick={() => navigate('/activities/save-nature')}>Save Nature</button>
+        <button className="blue-button" onClick={() => navigate('/activities/be-productive')}>Be Productive</button>
+        <button className="orange-button" onClick={() => navigate('/activities/have-fun')}>Have fun</button>
+        <button className="red-button" onClick={() => navigate('/activities/get-sportive')}>Get Sportive</button>
+        <button className="purple-button" onClick={() => navigate('/activities/travel-outdoor')}>Travel/Outdoor</button>
+        <button className="teal-button" onClick={() => navigate('/activities/indoor')}>Indoor</button>
       </div>
+
+      <Activities selectedCategory={selectedCategory} />
     </div>
   );
 }
